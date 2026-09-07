@@ -1,0 +1,423 @@
+/* ==========================================================================
+   1. VARIABLES CSS (Tema Oscuro Gaming)
+   Permiten cambiar colores globales desde un solo lugar.
+   ========================================================================== */
+:root {
+    --bg-main: #0f0f12;           /* Fondo general muy oscuro */
+    --bg-card: #18181c;           /* Fondo de tarjetas y elementos secundarios */
+    --text-primary: #ffffff;      /* Texto de alto contraste */
+    --text-secondary: #a0a0b0;    /* Texto secundario/descriptivo */
+    --accent-discord: #5865f2;    /* Color oficial de Discord */
+    --accent-hover: #4752c4;      /* Color de interacción al pasar el cursor */
+    --border-color: rgba(255, 255, 255, 0.01); /* Borde sutil transparente */
+}
+
+/* ==========================================================================
+   2. RESETS Y ESTILOS GENERALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no altere los anchos */
+}
+
+html {
+    scroll-behavior: smooth; /* Permite desplazamiento suave al hacer clic en el menú */
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   3. BARRA SUPERIOR FLOTANTE (EFECTO AERO / GLASSMORPHISM)
+   ========================================================================== */
+.glass-header {
+    position: sticky;           /* Mantiene la barra fija arriba al hacer scroll */
+    top: 0;
+    z-index: 1000;              /* Asegura que quede por encima de todo el contenido */
+    
+    /* Fondo oscuro semi-transparente + desenfoque de lo que pasa por detrás */
+    background-color: rgba(128, 128, 128, 0.01);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(12px); /* Soporte para navegadores Safari */
+    
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 1.5rem;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   4. HERO SECTION (BANNER CON SUPERPOSICIÓN DE IMAGEN Y TEXTO)
+   ========================================================================== */
+/*
+.hero-section {
+    position: relative;
+    min-height: 80vh;           /* Ocupa el 80% de la altura del navegador */
+    
+    /* 
+      RUTAS DE IMAGEN: Sustituir 'assets/images/hero-banner.jpg' por su imagen de fondo.
+      'linear-gradient' coloca un filtro oscuro por encima de la foto para mejorar la lectura.
+    *
+    background: linear-gradient(rgba(15, 15, 18, 0.6), rgba(15, 15, 18, 0.9)), 
+                url('../assets/images/hero-banner.jpg') no-repeat center center/cover;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+/* Imagen o Logo del juego superpuesto dentro del Banner *
+.hero-superposed-img {
+    max-width: 250px;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+*/
+
+/* 1. SECCIÓN PRINCIPAL (Fondo) *
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    
+    /* Importante: 'center center/cover' centra la foto de fondo y cubre todo el ancho *
+    background: linear-gradient(rgba(15, 15, 18, 0.6), rgba(15, 15, 18, 0.01)), 
+                url('../assets/images/Rain1.png') no-repeat center center/cover;
+    
+    /* Alineación de los elementos internos al centro *
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+*/
+
+.hero-section {
+    position: relative;
+    min-height: 80vh;
+    background: url('../assets/images/Rain1.png') no-repeat center center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Sombra/Degradado superpuesto en el borde inferior */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Ajusta la altura del desvanecido */
+    background: linear-gradient(to bottom, transparent, #0f0f12);
+    pointer-events: none; /* Permite hacer clic a través de la capa */
+}
+
+/* 2. CONTENEDOR INTERNO */
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+    
+    /* Alineación Flexbox para forzar que todo lo de adentro esté centrado verticalmente */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+/* 3. IMAGEN SUPERPUESTA (Logo o ilustración del recuadro rojo) */
+.hero-superposed-img {
+    /* Define un ancho visible (por ejemplo 250px o 300px) */
+    width: 650px;
+    height: auto;
+    
+    /* 'margin: 0 auto' centra elementos de bloque horizontalmente */
+    margin: 0 auto 0.1rem auto; 
+    display: block;
+}
+
+/* Para una imagen HTML de fondo o elemento <img> */
+.hero-section, img {
+    image-rendering: pixelated; /* Estándar actual para navegadores modernos */
+    image-rendering: crisp-edges; /* Soporte para navegadores antiguos/Firefox */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   5. BOTONES REUTILIZABLES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px); /* Pequeña animación de elevación */
+}
+
+.btn-discord {
+    background-color: var(--accent-discord);
+    color: #ffffff;
+}
+
+.btn-discord:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-secondary {
+    background-color: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.btn-header {
+    background-color: var(--accent-discord);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+}
+
+.btn-small {
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+/* ==========================================================================
+   6. SECCIONES Y CONTENIDOS (Juegos, Devlog, FAQ)
+   ========================================================================== */
+.section-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1.5rem;
+}
+
+.section-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--accent-discord);
+    padding-left: 0.8rem;
+}
+
+/* Grid de Tarjetas de Juegos */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.game-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Método de superposición de elemento sobre imagen usando posición absoluta */
+.card-image-wrapper {
+    position: relative;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body h3 {
+    margin-bottom: 0.5rem;
+}
+
+.card-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+/* Galería de capturas (Devlog) */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Estilos de Acordeón FAQ */
+details {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+details p {
+    margin-top: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   7. FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--bg-card);
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+}
+
+.social-icons img {
+    width: 48px;
+    height: 48px;
+    margin: 0 10px 1rem 10px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
+
+footer p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.privacy-link {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   8. ADAPTABILIDAD A MÓVILES (MEDIA QUERIES)
+   Aplica cambios de diseño automáticos cuando la pantalla es menor a 768px.
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Ajusta la barra de navegación para pantallas pequeñas */
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-header {
+        display: none; /* Oculta el botón secundario del menú en móviles para ahorrar espacio */
+    }
+
+    /* Reduce tamaños de tipografía en teléfonos */
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-superposed-img {
+        max-width: 180px;
+    }
+
+    .hero-buttons {
+        flex-direction: column; /* Apila los botones de acción uno debajo del otro */
+    }
+}
