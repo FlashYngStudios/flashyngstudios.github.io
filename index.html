@@ -1,166 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <!-- Configuración básica de caracteres y compatibilidad -->
     <meta charset="UTF-8">
-    
-    <!-- VITAL PARA MÓVILES: 'viewport' asegura que la web se escale correctamente a la pantalla del teléfono -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO: Descripción corta para los resultados de Google -->
-    <meta name="description" content="Sitio oficial de nuestro estudio indie de videojuegos. Descubre nuestros proyectos y únete a la comunidad.">
-    
+    <meta name="description" content="Sitio oficial de FlashYng Studios. Descubre nuestros proyectos indie y únete a la comunidad.">
     <title>FlashYng Studios | Indie Game Studio</title>
     
-    <!-- Enlace a la hoja de estilos externa -->
-    <link rel="stylesheet" href="CSS/style.css">
+    <!-- Hoja de estilos específica de la portada (incluye las variables y base automáticamente) -->
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
-
 <body>
 
-    <!-- 
-      HEADER / BARRA SUPERIOR (AERO GLASS EFFECT)
-      Se usa <header> para el menú superior que se mantendrá fijo y transparente al hacer scroll.
-    -->
+    <!-- CABECERA FLOTANTE / MENU PRINCIPAL -->
     <header class="glass-header">
         <nav class="navbar">
-            <!-- RUTA DE IMAGEN: Reemplazar 'assets/images/logo.png' con el logo de su estudio -->
-            <a href="#" class="brand-logo">
-                <img src="Assets/Images/Letters.png" alt="Logo del Estudio" class="logo-img">
+            <a href="index.html" class="brand-logo">
+                <img src="Assets/Images/Letters.png" alt="Logo FlashYng Studios" class="logo-img">
             </a>
 
-            <!-- Menú de navegación principal -->
+            <!-- Navegación entre las distintas páginas del sitio -->
             <ul class="nav-links">
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#juegos">Juegos</a></li>
-                <li><a href="#devlog">Devlog</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="games.html">Juegos</a></li>
+                <li><a href="devlog.html">Devlog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contacto</a></li>
             </ul>
-
-            <!-- Botón de acción rápido hacia Discord en la barra superior ->
-            <a href="https://discord.gg/TU_CODIGO" target="_blank" rel="noopener" class="btn btn-header">
-                Discord
-            </a> -->
 
             <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="btn btn-header">
                 Discord
             </a>
-
         </nav>
     </header>
 
     <main>
+        <!-- SECCIÓN HERO CON SLIDER DE IMÁGENES DE FONDO -->
+        <section class="hero-section">
+            
+            <!-- Contenedor del Slider: Agrega tantas imágenes como proyectos quieras mostrar -->
+            <div class="hero-slider" id="hero-slider">
+                <!-- La primera imagen lleva la clase 'active' para mostrarse al cargar -->
+                <div class="slide active" style="background-image: url('Assets/Images/Games/Elements_gameplay.png');"></div>
+                <div class="slide active" style="background-image: url('Assets/Images/Games/Miosteroids_gameplay.png');"></div>
+                <!-- Agrega aquí más imágenes de tus otros juegos/proyectos -->
+                <!-- <div class="slide" style="background-image: url('Assets/Images/project-2.png');"></div> -->
+            </div>
 
-        <!-- 
-          HERO SECTION (BANNER INICIAL)
-          Contenedor principal que usa una imagen de fondo con capas y texto/imágenes superpuestas.
-        -->
-        <section id="hero" class="hero-section">
-            <!-- Capa contenedora para centrar el contenido sobre la imagen de fondo -->
+            <!-- Contenido textual superpuesto -->
             <div class="hero-content">
-                
-                <!-- RUTA DE IMAGEN: Si quieren superponer el logo del juego o una imagen promocional en grande -->
-                <img src="Assets/Images/Letters.png" alt="Logo Promocional" class="hero-superposed-img">
+                <img src="Assets/Images/Letters.png" alt="Logo Promocional" class="hero-superposed-img pixel-art">
                 
                 <h1>Creando mundos únicos e inolvidables</h1>
                 <p>Somos un pequeño equipo de desarrollo apasionado por los videojuegos indie.</p>
 
                 <div class="hero-buttons">
-                    <!-- Botón principal con enlace directo a Discord -->
                     <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="btn btn-discord">
                         Únete a nuestro Discord
                     </a>
-                    
-                    <!-- Botón secundario navegando hacia la sección de juegos en la misma página -->
-                    <a href="#juegos" class="btn btn-secondary">
+                    <a href="games.html" class="btn btn-secondary">
                         Ver Juegos
                     </a>
                 </div>
             </div>
         </section>
-
-        <!-- 
-          SECCIÓN DE JUEGOS (ARTICLE & GRID)
-          Se usa <section> para dividir temas y <article> para cada ficha de juego independiente.
-        -->
-        <section id="juegos" class="section-container">
-            <h2>Nuestros Juegos</h2>
-            
-            <div class="games-grid">
-                <!-- Tarjeta de juego individual -->
-                <article class="game-card">
-                    <div class="card-image-wrapper">
-                        <!-- RUTA DE IMAGEN: Portada o captura del juego -->
-                        <img src="Assets/Images/game-cover-1.jpg" alt="Portada del Juego 1">
-                        <!-- Badge/Etiqueta flotante superpuesta sobre la imagen del juego -->
-                        <span class="badge">En Desarrollo</span>
-                    </div>
-                    
-                    <div class="card-body">
-                        <h3>Nombre del Juego 1</h3>
-                        <p>Una breve descripción de la trama, género y mecánicas principales de su proyecto.</p>
-                        
-                        <!-- Enlaces de compra/descarga a tiendas externas -->
-                        <div class="card-links">
-                            <a href="https://flashyng.itch.io" target="_blank" rel="noopener" class="btn btn-small">itch.io</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <!-- SECCIÓN DETRÁS DE ESCENA (DEVLOG) -->
-        <section id="devlog" class="section-container">
-            <h2>Detrás de Escena</h2>
-            <p>Capturas del proceso de desarrollo, conceptos y pruebas de juego.</p>
-            
-            <div class="gallery-grid">
-                <!-- RUTAS DE IMÁGENES: Capturas de pantalla del desarrollo -->
-                <img src="Assets/Images/devlog-1.jpg" alt="Captura de desarrollo 1">
-                <img src="Assets/Images/devlog-2.jpg" alt="Captura de desarrollo 2">
-                <img src="Assets/Images/devlog-3.jpg" alt="Captura de desarrollo 3">
-            </div>
-        </section>
-
-        <!-- SECCIÓN DE PREGUNTAS FRECUENTES (FAQ) -->
-        <section id="faq" class="section-container">
-            <h2>Preguntas Frecuentes</h2>
-            
-            <!-- <details> y <summary> permiten crear menús desplegables nativos sin usar JS -->
-            <details>
-                <summary>¿En qué plataformas estará disponible el juego?</summary>
-                <p>Lanzaremos primeramente en itch.io para PC y posteriormente en la Google Play Store.</p>
-            </details>
-            
-            <details>
-                <summary>¿Cómo puedo participar en las pruebas Beta?</summary>
-                <p>Anunciamos todas nuestras convocatorias de pruebas exclusivamente en nuestro servidor de Discord.</p>
-            </details>
-        </section>
-
     </main>
 
-    <!-- 
-      FOOTER (PIE DE PÁGINA)
-      Contiene las redes sociales, copyright y el enlace a la Política de Privacidad.
-    -->
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <div class="social-icons">
-            <!-- RUTAS DE IMÁGENES: Iconos SVG o PNG de sus redes sociales -->
-            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
-                <img src="Assets/Images/Brand/yt_icon_white_digital.png" alt="YouTube">
+        <!--
+        <div class="social-link"> <!-class="social-icons"->
+            <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" aria-label="YouTube">
+                <img src="Assets/Images/Brand/yt_icon_white_digital.png" alt="YouTube" loading="lazy">
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-                <img src="Assets/Images/Brand/Instagram_Glyph_White.png" alt="Instagram">
+            <a href="https://www.instagram.com/flashyngstudios" target="_blank" rel="noopener" aria-label="Instagram">
+                <img src="Assets/Images/Brand/Instagram_Glyph_White.png" alt="Instagram" loading="lazy">
+            </a>
+        </div>
+        -->
+
+        <div class="social-links-container">
+            <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/youtube_icon.png" alt="YouTube" class="social-icon">
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/flashyngstudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/instagram_icon.png" alt="Instagram" class="social-icon">
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/discord_icon.png" alt="Discord" class="social-icon">
+                <span>Discord</span>
+            </a>
+
+            <a href="https://flashyng.itch.io" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/itchio_icon.png" alt="itchio" class="social-icon">
+                <span>itch.io</span>
             </a>
         </div>
 
         <p>&copy; 2026 FlashYng Studios. Todos los derechos reservados.</p>
-        
-        <!-- Enlace obligatorio exigido por Google Play Console -->
         <a href="privacy-policy.html" class="privacy-link">Política de Privacidad</a>
     </footer>
 
+    <!-- Script para controlar la transición automática de imágenes de fondo -->
+    <script src="JS/main.js"></script>
 </body>
 </html>

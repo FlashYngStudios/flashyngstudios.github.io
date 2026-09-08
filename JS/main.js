@@ -1,17 +1,30 @@
-// Obtener el botón por su ID
-const themeToggleBtn = document.getElementById('theme-toggle');
-
-// Escuchar el clic del usuario
-themeToggleBtn.addEventListener('click', () => {
-    // Leer el tema actual del atributo 'data-theme' en el HTML
-    const currentTheme = document.documentElement.getAttribute('data-theme');
+/* ==========================================================================
+   SLIDER AUTOMÁTICO DE FONDO (HERO SECTION)
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todas las capas de imagen dentro del slider
+    const slides = document.querySelectorAll('#hero-slider .slide');
     
-    // Alternar entre claro y oscuro
-    if (currentTheme === 'light') {
-        document.documentElement.removeAttribute('data-theme');
-        themeToggleBtn.textContent = 'Modo Claro';
-    } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        themeToggleBtn.textContent = 'Modo Oscuro';
+    // Si no existen slides en la página actual (ej. fuera de index.html), corta la ejecución
+    if (slides.length <= 1) return;
+
+    let currentSlide = 0;
+    const slideInterval = 10000; // Tiempo en milisegundos entre cada cambio (5 segundos)
+
+    /**
+     * Alterna la clase 'active' para manejar la opacidad con la transición suave definida en CSS
+     */
+    function nextSlide() {
+        // Quita la clase activa a la imagen actual
+        slides[currentSlide].classList.remove('active');
+        
+        // Calcula el índice de la siguiente imagen (vuelve a 0 al llegar al final)
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        // Aplica la clase activa a la nueva imagen
+        slides[currentSlide].classList.add('active');
     }
+
+    // Inicia el temporizador cíclico
+    setInterval(nextSlide, slideInterval);
 });

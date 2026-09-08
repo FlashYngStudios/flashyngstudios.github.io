@@ -1,0 +1,293 @@
+@import "./variables.css";
+
+/* ==========================================================================
+   RESETS Y ESTILOS GLOBALES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-primary);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Regla específica para pixel art (solo aplícala donde la necesites) */
+.pixel-art {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR FLOTANTE (GLASSMORPHISM)
+   ========================================================================== */
+.glass-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--color-bg-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.8rem 1.5rem;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-img {
+    height: 38px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+}
+
+.nav-links a {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--text-primary);
+}
+
+/* ==========================================================================
+   BOTONES REUTILIZABLES
+   ========================================================================== */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform var(--transition-speed), background-color var(--transition-speed);
+    cursor: pointer;
+    border: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-discord, .btn-header {
+    background-color: var(--color-accent-discord);
+    color: #ffffff;
+}
+
+.btn-discord:hover, .btn-header:hover {
+    background-color: var(--color-accent-hover);
+}
+
+.btn-header {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+}
+
+.btn-secondary {
+    background-color: var(--color-bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+    background-color: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    margin-top: 4rem;
+}
+
+/*
+.social-icons img {
+    width: 36px;
+    height: 36px;
+    margin: 0 10px 1rem 10px;
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+}
+
+.social-icons img:hover {
+    opacity: 1;
+}
+*/
+
+/* Evita que cualquier imagen sobrepase su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CONTENEDOR DE ÍCONOS REDONDEADOS */
+/*
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px; /* Usa 50% si prefieres círculos perfectos *
+    transition: transform var(--transition-speed), border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent-discord);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.social-link img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    opacity: 0.8;
+    transition: opacity var(--transition-speed);
+}
+*/
+
+/* CONTENEDOR PRINCIPAL */
+.social-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÓN INDIVIDUAL (ÍCONO + TEXTO DENTRO) */
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.6rem 1.2rem;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: transform var(--transition-speed), border-color var(--transition-speed), background-color var(--transition-speed);
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent-discord);
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* TAMAÑO Y AJUSTE DE LA IMAGEN INTERNA */
+.social-icon {
+    width: 20px !important;
+    height: 20px !important;
+    object-fit: contain;
+    display: block;
+}
+
+/* CONTENEDOR REDONDEADO DE ÍCONOS */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; /* Tamaño del botón */
+    height: 44px;
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    transition: transform var(--transition-speed), border-color var(--transition-speed);
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-accent-discord);
+}
+
+/* TAMAÑO FORZADO DE LOS ÍCONOS */
+.social-link img {
+    width: 48px !important;  /* TAMAÑO FIJO CONTROLADO */
+    height: 48px !important;
+    object-fit: contain;      /* Mantiene la proporción */
+}
+
+.social-link:hover img {
+    opacity: 1;
+}
+
+footer p {
+    color: var(--color-text-secondary);
+    font-size: 0.9rem;
+}
+
+.privacy-link {
+    color: var(--color-text-secondary);
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+    text-decoration: none;
+}
+
+.privacy-link:hover {
+    color: var(--color-text-primary);
+}
+
+/* RESPONSIVE BASE */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-header {
+        display: none;
+    }
+}
