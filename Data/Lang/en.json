@@ -1,0 +1,24 @@
+{
+  "menu-home": "Home",
+  "menu-games": "Games",
+  "menu-devlog": "Devlog",
+  "menu-faq": "FAQ",
+  "menu-social": "Social",
+  "menu-contact": "Contact",
+  "menu-privacity": "Privacy",
+
+  "footer-privacity": "Privacy Policy",
+  "footer-copyright": "© 2026 FlashYng Studios. All rights reserved.",
+
+  "index-slogan": "Creating unique and unforgettable worlds",
+  "index-groupInfo": "We are a small development team passionate about indie games.",
+  "index-start-text": "Ready to start your next adventure?",
+  "index-start-button": "View games",
+
+  "faq-titulo": "Frequently Asked Questions (FAQ)",
+
+  "contact-title": "Have a question?",
+  "contact-subtitle": "Write to us for technical support, privacy inquiries, press, or collaborations.",
+  "contact-support-note": "Support note: FlashYng Studios is an independent studio. We do our best to address every message; however, response times may vary depending on the volume of requests. We appreciate your patience!"
+
+}

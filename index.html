@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio oficial de FlashYng Studios. Descubre nuestros proyectos indie y únete a la comunidad.">
+    <title>FlashYng Studios | Indie Game Studio</title>
+    
+    <!-- Hoja de estilos específica de la portada (incluye las variables y base automáticamente) -->
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+
+    <!-- CABECERA FLOTANTE / MENU PRINCIPAL -->
+    <header class="glass-header">
+        <nav class="navbar">
+            <a href="index.html" class="brand-logo">
+                <img src="Assets/Images/FlashYngStudios/Logo.png" alt="Logo FlashYng Studios" class="logo-img">
+            </a>
+
+            <!-- Navegación entre las distintas páginas del sitio -->
+            <ul class="nav-links">
+                <li><a data-lang="menu-home" href="index.html" class="active">Inicio</a></li>
+                <li><a data-lang="menu-games" href="games.html">Juegos</a></li>
+                <li><a data-lang="menu-devlog" href="devlog.html">Devlog</a></li>
+                <li><a data-lang="menu-faq" href="faq.html">FAQ</a></li>
+                <li><a data-lang="menu-social" href="social.html">Redes</a></li>
+                <li><a data-lang="menu-contact" href="contact.html">Contacto</a></li>
+                <li><a data-lang="menu-privacity" href="privacy-policy.html">Privacidad</a></li>
+            </ul>
+
+            <!--
+            <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="btn btn-header">
+                Discord
+            </a>
+            -->
+
+            <!-- <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" class="social-btn"> -->
+
+            <!-- <a target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Icons/language_icon.png" alt="YouTube" class="social-icon">
+                <span>en / es</span> <!- <span>en / es / pt / fr / de</span> ->
+            </a> -->
+
+            <button type="button" onclick="alternarIdioma()" class="social-btn">
+                <img src="Assets/Images/Icons/language_icon.png" alt="Language" class="social-icon">
+                <span>en / es</span>
+            </button>
+
+        </nav>
+    </header>
+
+    <main>
+        <!-- SECCIÓN HERO CON SLIDER DE IMÁGENES DE FONDO -->
+        <section class="hero-section">
+            
+            <!-- Contenedor del Slider: Agrega tantas imágenes como proyectos quieras mostrar -->
+            <div class="hero-slider" id="hero-slider">
+                <!-- La primera imagen lleva la clase 'active' para mostrarse al cargar -->
+                <div class="slide active" style="background-image: url('Assets/Images/Games/Elements_gameplay.png');"></div>
+                <div class="slide active" style="background-image: url('Assets/Images/Games/Miosteroids_gameplay.png');"></div>
+                <!-- Agrega aquí más imágenes de tus otros juegos/proyectos -->
+                <!-- <div class="slide" style="background-image: url('Assets/Images/project-2.png');"></div> -->
+            </div>
+
+            <!-- Contenido textual superpuesto -->
+            <div class="hero-content">
+                <img src="Assets/Images/FlashYngStudios/Logo.png" alt="Logo Promocional" class="hero-superposed-img pixel-art">
+                
+                <h1 data-lang="index-slogan">Creando mundos únicos e inolvidables</h1>
+                <p data-lang="index-groupInfo">Somos un pequeño equipo de desarrollo apasionado por los videojuegos indie.</p>
+
+                <h2 data-lang="index-start-text">¿Listo para comenzar tu próxima a ventura?</h2>
+
+
+                <div class="hero-buttons">
+
+                    <!--
+                    <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="btn btn-discord">
+                        Únete a nuestro Discord
+                    </a>
+                    -->
+
+                    <a data-lang="index-start-button" href="games.html" class="btn btn-secondary">
+                        Ver Juegos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="social-links-container">
+            <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/youtube_icon.png" alt="YouTube" class="social-icon">
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/flashyngstudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/instagram_icon.png" alt="Instagram" class="social-icon">
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/discord_icon.png" alt="Discord" class="social-icon">
+                <span>Discord</span>
+            </a>
+
+            <a href="https://flashyng.itch.io" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/itchio_icon.png" alt="itchio" class="social-icon">
+                <span>itch.io</span>
+            </a>
+        </div>
+
+        <p data-lang="footer-copyright">&copy; 2026 FlashYng Studios. Todos los derechos reservados.</p>
+        <a data-lang="footer-privacity" href="privacy-policy.html" class="privacy-link">Política de Privacidad</a>
+    </footer>
+
+    <!-- Script para controlar la transición automática de imágenes de fondo -->
+    <script src="./JS/changeHomeBackgrounds.js"></script>
+
+    <script src="./JS/langSelector.js"></script>
+
+</body>
+</html>
