@@ -15,20 +15,6 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- Sección de Games -->
-  <url>
-    <loc>https://flashyngstudios.github.io/games.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <priority>0.8</priority>
-  </url>
-
-    <!-- Sección de Devlog -->
-  <url>
-    <loc>https://flashyngstudios.github.io/devlog.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <priority>0.8</priority>
-  </url>
-
     <!-- Sección de FAQ -->
   <url>
     <loc>https://flashyngstudios.github.io/faq.html</loc>
