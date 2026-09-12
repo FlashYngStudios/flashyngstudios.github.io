@@ -11,14 +11,21 @@
   "footer-copyright": "© 2026 FlashYng Studios. All rights reserved.",
 
   "index-slogan": "Creating unique and unforgettable worlds",
-  "index-groupInfo": "We are a small development team passionate about indie games.",
+  "index-groupInfo": "We are a small development team passionate about indie video games.",
   "index-start-text": "Ready to start your next adventure?",
   "index-start-button": "View games",
 
   "faq-titulo": "Frequently Asked Questions (FAQ)",
 
   "contact-title": "Have a question?",
-  "contact-subtitle": "Write to us for technical support, privacy inquiries, press, or collaborations.",
-  "contact-support-note": "Support note: FlashYng Studios is an independent studio. We do our best to address every message; however, response times may vary depending on the volume of requests. We appreciate your patience!"
-
+  "contact-subtitle": "Write to us for technical support, privacy reports, press inquiries, or collaborations.",
+  "contact-support-note": "Support note: FlashYng Studios is an independent studio. We do our best to address every message; however, response times may vary depending on the volume of requests. We appreciate your patience!",
+  "contact-support-useInfo-title": "Use of your contact information",
+  "contact-support-useInfo-text": "The information you voluntarily provide when sending us an email (such as your email address, name, or device details for troubleshooting) will be used exclusively to respond to your inquiry. We do not store your data in external databases or share it with third parties. If you would like us to delete the email history after your case is resolved, you can request this at any time by replying to the same thread.",
+  "contact-support-tags-title": "Tags",
+  "contact-support-tags-text": "We appreciate your cooperation in using tags in the subject line of each email sent; this helps us maintain better organization.",
+  "contact-support-text-bug": "[Bug] For error reports",
+  "contact-support-text-brad": "[Brand] Press inquiries",
+  "contact-support-text-business": "[Business] Business or collaborations",
+  "contact-support-text-privacity": "[Privacy] Privacy policy"
 }

@@ -19,6 +19,13 @@
 
   "contact-title": "¿Tienes alguna consulta?",
   "contact-subtitle": "Escríbenos para soporte técnico, reportes de privacidad, prensa o colaboraciones.",
-  "contact-support-note": "Nota sobre el soporte: FlashYng Studios es un estudio independiente. Hacemos nuestro mejor esfuerzo por atender cada mensaje; sin embargo, los tiempos de respuesta pueden variar según el volumen de solicitudes. ¡Agradecemos tu paciencia!"
-
+  "contact-support-note": "Nota sobre el soporte: FlashYng Studios es un estudio independiente. Hacemos nuestro mejor esfuerzo por atender cada mensaje; sin embargo, los tiempos de respuesta pueden variar según el volumen de solicitudes. ¡Agradecemos tu paciencia!",
+  "contact-support-useInfo-title": "Uso de tu información de contacto",
+  "contact-support-useInfo-text": "La información que nos proporciones voluntariamente al enviarnos un correo (como tu dirección de e-mail, nombre o detalles de tu dispositivo para resolver errores) será utilizada exclusivamente para responder a tu consulta. No almacenamos tus datos en bases de datos externas ni los compartimos con terceros. Si deseas que eliminemos el historial de correos enviados tras resolver tu caso, puedes solicitarlo en cualquier momento respondiendo al mismo hilo.",
+  "contact-support-tags-title": "Etiquetas",
+  "contact-support-tags-text": "Agradecemos la colaboracion con el uso de Etiquetas en el asunto de cada correo enviado, nos permiten mantener una mejor organizacion.",
+  "contact-support-text-bug": "[Bug] Para reportes de errores",
+  "contact-support-text-brad": "[Brand] Sobre prensa",
+  "contact-support-text-business": "[Business] Para negocios o colaboraciones",
+  "contact-support-text-privacity": "[Privacity] Sobre política de privacidad"
 }
