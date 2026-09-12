@@ -9,9 +9,9 @@ const show_notice = true;
 (function()
 {
     if (show_notice) {
-        window.location.replace("notice.html");
+        window.location.replace("./notice.html");
     } else {
-        window.location.replace("home.html");
+        window.location.replace("./home.html");
     }
 })();
 
