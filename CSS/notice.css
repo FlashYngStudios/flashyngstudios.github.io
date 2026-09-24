@@ -1,0 +1,326 @@
+/* ==========================================================================
+   ESTILOS AERO / FRUTIGER GLASSMORPHISM (MANTENIMIENTO)
+   ========================================================================== */
+
+/* Fondo dinámico y centrado */
+/* ==========================================================================
+   CENTRADOR ABSOLUTO EN PANTALLA
+   ========================================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    min-height: 100dvh; /* Compatibilidad con navegadores móviles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #090a0f;
+    overflow-x: hidden;
+}
+/*
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: #090a0f;
+    overflow: hidden;
+}
+*/
+
+/* Orbes resplandecientes estilo Aero de fondo */
+.aero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.aero-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+    opacity: 0.35;
+    animation: orbFloat 10s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(circle, #5865f2 0%, #00d2ff 100%);
+    top: -10%;
+    left: 15%;
+}
+
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, #7289da 0%, #0051ff 100%);
+    bottom: -15%;
+    right: 10%;
+    animation-delay: -5s;
+}
+
+@keyframes orbFloat {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-40px) scale(1.08); }
+}
+
+/* Contenedor y Tarjeta Aero Glass */
+.maintenance-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 580px;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    /* Asegura que si el alto es pequeño, no se desplace raro */
+    margin: auto; 
+}
+/*
+.maintenance-wrapper {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 580px;
+    padding: 1.5rem;
+}
+*/
+
+.aero-card {
+    position: relative;
+    background: rgba(20, 22, 32, 0.45);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3),
+                inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+
+    align-items: center; /* Centra horizontalmente todos los elementos internos */
+}
+
+/* Reflejo superior estilo cristal grabado */
+.glass-reflection {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 45%;
+    background: linear-gradient(
+        180deg, 
+        rgba(255, 255, 255, 0.12) 0%, 
+        rgba(255, 255, 255, 0.01) 100%
+    );
+    transform: rotate(-5deg);
+    pointer-events: none;
+}
+
+/* Logo */
+.brand-logo-aero {
+    height: 196px;
+    width: auto;
+    margin: 0 auto 1.8rem auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+}
+
+/* Badges / Estado */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1rem;
+    background: rgba(255, 170, 0, 0.12);
+    border: 1px solid rgba(255, 170, 0, 0.3);
+    border-radius: 20px;
+    color: #ffca28;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.15);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ffca28;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #ffca28;
+    animation: pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0.4; }
+}
+
+/* Textos */
+
+.aero-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #ffffff 0%, #d0d5ff 100%);
+    
+    /* Propiedades de recortes de texto (Agrega la versión estándar aquí) */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*
+.aero-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(180deg, #ffffff 0%, #d0d5ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+*/
+
+.aero-description {
+    color: var(--color-text-secondary);
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 2.2rem;
+}
+
+/* BOTONES AERO ULTRA INTERACTIVOS */
+/*
+.aero-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+*/
+
+.aero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.aero-btn {
+    width: 100%; /* Si quieres que ocupe el ancho de la tarjeta */
+    /*max-width: 320px; / O el tamaño máximo que prefieras */
+
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.95rem 1.8rem;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+}
+
+/* Botón Primario (Aero Glow Blue) */
+.aero-btn.primary {
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.9) 0%, rgba(55, 66, 210, 0.9) 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(88, 101, 242, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.aero-btn.primary:hover {
+    transform: translateY(-3px) scale(1.02);
+    background: linear-gradient(135deg, rgba(98, 111, 252, 1) 0%, rgba(65, 76, 220, 1) 100%);
+    box-shadow: 0 12px 30px rgba(88, 101, 242, 0.6),
+                0 0 15px rgba(0, 210, 255, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.aero-btn.primary:active {
+    transform: translateY(-1px) scale(0.99);
+}
+
+/* Botón Secundario (Glass Frosted) */
+.aero-btn.secondary {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.aero-btn.secondary:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    transition: transform 0.3s ease;
+}
+
+.aero-btn.primary:hover .btn-icon {
+    transform: translateX(4px);
+}
+
+/* Enlaces del pie */
+.aero-footer-links p {
+    font-size: 0.82rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.mini-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.mini-socials a {
+    color: #a0c0ff;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.mini-socials a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(88, 101, 242, 0.8);
+}
+
+.mini-socials span {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Adaptación Móvil */
+@media (max-width: 480px) {
+    .aero-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .aero-title {
+        font-size: 1.5rem;
+    }
+}
