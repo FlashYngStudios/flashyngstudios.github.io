@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /Documentation/
+Disallow: /HTML/Old
+
+Sitemap: https://flashyngstudios.github.io/sitemap.xml

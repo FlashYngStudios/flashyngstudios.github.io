@@ -1,0 +1,39 @@
+<div id="noticeModal" class="notice-overlay">
+    <main class="maintenance-wrapper">
+        <div class="aero-card">
+            
+            <!-- Reflejo superior estilo Aero Glass -->
+            <div class="glass-reflection"></div>
+
+            <!-- Logo -->
+            <img src="Assets/Images/FlashYngStudios/FlashYngStudios_Logo.png" alt="FlashYng Studios" class="brand-logo-aero pixel-art">
+
+            <!-- Estado / Badge urgente -->
+            <div class="status-badge warning">
+                <span class="status-dot warning"></span>
+                <span>Aviso de Seguridad</span>
+            </div>
+
+            <!-- Contenido del aviso -->
+            <h1 class="aero-title">Incidente en nuestros canales</h1>
+            <p class="aero-description">
+                Hemos detectado actividad no autorizada en una de nuestras plataformas externas. Por tu seguridad, no hagas clic en enlaces sospechosos ni compartas credenciales.
+            </p>
+
+            <p class="aero-description">
+                {TEXTO_FECHA}
+            </p>
+
+            <!-- Acciones -->
+            <div class="aero-actions">
+                <button type="button" onclick="cerrarAviso()" class="aero-btn primary">
+                    <span>Entendido, continuar a la web</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </main>
+</div>

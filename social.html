@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociales | FlashYng Studios</title>
+    <link rel="stylesheet" href="CSS/contact.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELCMVDMWVH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ELCMVDMWVH');
+</script>
+
+<body>
+
+    <!-- CABECERA FLOTANTE / MENU PRINCIPAL -->
+    <header class="glass-header">
+        <nav class="navbar">
+            <!-- Logo siempre a la izquierda -->
+            <a href="home.html" class="logo-img">
+                <img src="Assets/Images/FlashYngStudios/FlashYngStudios_Icon_1to1_512px_BT.png" alt="Logo FlashYng Studios" class="logo-img">
+            </a>
+
+            <!-- Contenedor desplegable (Links del menú) -->
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a data-lang="menu-home" class="social-btn" href="home.html">Inicio</a></li>
+                    <li><a data-lang="menu-games" class="social-btn" href="games.html">Juegos</a></li>
+                    <li><a data-lang="menu-devlog" class="social-btn" href="devlog.html">Devlog</a></li>
+                    <li><a data-lang="menu-faq" class="social-btn" href="faq.html">FAQ</a></li>
+
+                    <!-- Opciones menos importantes que quieres ocultar cuando el menú NO está abierto -->
+                    <li class="hide-on-collapsed"><a data-lang="menu-social" class="social-btn" href="social.html">Redes</a></li>
+                    <li class="hide-on-collapsed"><a data-lang="menu-contact" class="social-btn" href="contact.html">Contacto</a></li>
+                    <li class="hide-on-collapsed"><a data-lang="menu-privacity" class="social-btn" href="privacy-policy.html">Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Botón de lenguaje (entre links centrales y menú hamburguesa) -->
+            <button type="button" onclick="alternarIdioma()" class="social-btn lang-btn">
+                <img src="Assets/Images/Icons/language_icon.png" alt="Language" class="social-icon">
+                <span>en / es</span>
+            </button>
+
+            <!-- Botón de menú hamburguesa (lo más a la derecha posible) -->
+            <button type="button" class="social-btn burger-btn" id="burgerBtn" aria-label="Abrir menú">
+                <img src="Assets/Images/Icons/hamburgerMenu_T_W.png" alt="hamburgerMenu" class="social-icon">
+            </button>
+        </nav>
+    </header>
+
+    <main class="section-container" style="padding: 2rem 1rem;">
+        <div class="contact-card" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h1 data-lang="social-title" class="section-title" style="border: none; padding: 0;">Nuestras Redes Oficiales</h1>
+            <p data-lang="social-subtitle">Conéctate con nosotros y sigue el desarrollo de nuestros juegos en nuestras plataformas oficiales.</p>
+
+            <!-- Botones de redes sociales del home centrados -->
+            <div class="social-links-container" style="margin: 2rem 0; flex-wrap: wrap;">
+                <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" class="social-btn">
+                    <img src="Assets/Images/Brand/youtube_icon.png" alt="YouTube" class="social-icon">
+                    <span>YouTube</span>
+                </a>
+
+                <a href="https://www.instagram.com/flashyngstudios" target="_blank" rel="noopener" class="social-btn">
+                    <img src="Assets/Images/Brand/instagram_icon.png" alt="Instagram" class="social-icon">
+                    <span>Instagram</span>
+                </a>
+
+                <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="social-btn">
+                    <img src="Assets/Images/Brand/discord_icon.png" alt="Discord" class="social-icon">
+                    <span>Discord</span>
+                </a>
+
+                <a href="https://flashyng.itch.io" target="_blank" rel="noopener" class="social-btn">
+                    <img src="Assets/Images/Brand/itchio_icon.png" alt="itchio" class="social-icon">
+                    <span>itch.io</span>
+                </a>
+            </div>
+
+            <!-- Aviso de veracidad y cuentas oficiales -->
+            <div style="margin-top: 2.5rem; text-align: left; background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: 8px; font-size: 0.85rem; line-height: 1.5; color: #ccc;">
+                <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem; color: #fff;">Aviso sobre cuentas de usuario</h3>
+                <p>
+                    Las plataformas y perfiles listados arriba son nuestros <strong>únicos canales de comunicación y difusión oficiales</strong>. 
+                    Si encuentras alguna cuenta o usuario en cualquier otra red social, foro o plataforma utilizando nuestro nombre, logo o marca que no esté explícitamente mencionado en esta lista, <strong>no somos nosotros</strong>.
+                </p>
+            </div>
+
+            <!-- Recomendación de seguridad -->
+            <div style="margin-top: 1.5rem; text-align: left; background: rgba(255, 255, 255, 0.03); padding: 1.2rem; border-radius: 8px; font-size: 0.85rem; line-height: 1.5; color: #ccc;">
+                <h3 style="margin-bottom: 0.5rem; font-size: 0.95rem; color: #fff;">Seguridad y Verificación</h3>
+                <p>
+                    Nunca solicitaremos información confidencial, contraseñas ni pagos directos fuera de nuestros canales y tiendas asociadas. Si sospechas de una cuenta falsa, por favor contáctanos directamente a través de nuestra sección de <a href="contact.html" style="color: #fff; text-decoration: underline;">Contacto</a>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="social-links-container">
+            <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/youtube_icon.png" alt="YouTube" class="social-icon">
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/flashyngstudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/instagram_icon.png" alt="Instagram" class="social-icon">
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/discord_icon.png" alt="Discord" class="social-icon">
+                <span>Discord</span>
+            </a>
+
+            <a href="https://flashyng.itch.io" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/itchio_icon.png" alt="itchio" class="social-icon">
+                <span>itch.io</span>
+            </a>
+        </div>
+
+        <p data-lang="footer-copyright">&copy; 2026 FlashYng Studios. Todos los derechos reservados.</p>
+        <a data-lang="footer-privacity" href="privacy-policy.html" class="privacy-link">Política de Privacidad</a>
+    </footer>
+
+    <script src="./JS/langSelector.js"></script>
+    <script src="./JS/hamburguerMenuToggle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<div id="noticeModal" class="notice-overlay">
+    <main class="maintenance-wrapper">
+        <div class="aero-card">
+            
+            <!-- Reflejo superior estilo Aero Glass -->
+            <div class="glass-reflection"></div>
+
+            <!-- Logo -->
+            <img src="Assets/Images/FlashYngStudios/FlashYngStudios_Logo.png" alt="FlashYng Studios" class="brand-logo-aero pixel-art">
+
+            <!-- Estado -->
+            <div class="status-badge">
+                <span class="status-dot"></span>
+                <span>Mantenimiento en progreso</span>
+            </div>
+
+            <!-- Contenido del aviso -->
+            <h1 class="aero-title">Estamos puliendo detalles</h1>
+            <p class="aero-description">
+                El sitio web se encuentra en actualización para ofrecerte una mejor experiencia. 
+                Puedes seguir navegando, pero podrías encontrar algunos errores temporales.
+            </p>
+
+            <p class="aero-description">
+                {TEXTO_FECHA}
+            </p>
+
+            <!-- Botones con clases Aero estándar -->
+            <div class="aero-actions">
+                <button type="button" onclick="cerrarAviso()" class="aero-btn primary">
+                    <span>Continuar a la web</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+    </main>
+</div>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes | FlashYng Studios</title>
+    <link rel="stylesheet" href="CSS/faq.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ELCMVDMWVH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ELCMVDMWVH');
+</script>
+
+<body>
+
+    <!-- CABECERA FLOTANTE / MENU PRINCIPAL -->
+    <header class="glass-header">
+        <nav class="navbar">
+            <!-- Logo siempre a la izquierda -->
+            <a href="home.html" class="logo-img">
+                <img src="Assets/Images/FlashYngStudios/FlashYngStudios_Icon_1to1_512px_BT.png" alt="Logo FlashYng Studios" class="logo-img">
+            </a>
+
+            <!-- Contenedor desplegable (Links del menú) -->
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a data-lang="menu-home" class="social-btn" href="home.html">Inicio</a></li>
+                    <li><a data-lang="menu-games" class="social-btn" href="games.html">Juegos</a></li>
+                    <li><a data-lang="menu-devlog" class="social-btn" href="devlog.html">Devlog</a></li>
+                    <li><a data-lang="menu-faq" class="social-btn" href="faq.html">FAQ</a></li>
+
+                    <!-- Opciones menos importantes que quieres ocultar cuando el menú NO está abierto -->
+                    <li class="hide-on-collapsed"><a data-lang="menu-social" class="social-btn" href="social.html">Redes</a></li>
+                    <li class="hide-on-collapsed"><a data-lang="menu-contact" class="social-btn" href="contact.html">Contacto</a></li>
+                    <li class="hide-on-collapsed"><a data-lang="menu-privacity" class="social-btn" href="privacy-policy.html">Privacidad</a></li>
+                </ul>
+            </div>
+
+            <!-- Botón de lenguaje (entre links centrales y menú hamburguesa) -->
+            <button type="button" onclick="alternarIdioma()" class="social-btn lang-btn">
+                <img src="Assets/Images/Icons/language_icon.png" alt="Language" class="social-icon">
+                <span>en / es</span>
+            </button>
+
+            <!-- Botón de menú hamburguesa (lo más a la derecha posible) -->
+            <button type="button" class="social-btn burger-btn" id="burgerBtn" aria-label="Abrir menú">
+                <img src="Assets/Images/Icons/hamburgerMenu_T_W.png" alt="hamburgerMenu" class="social-icon">
+            </button>
+        </nav>
+    </header>
+
+    <main class="section-container">
+        <h1>Preguntas Frecuentes (FAQ)</h1>
+        
+        <div class="faq-list">
+            <!--
+            <details>
+                <summary>¿En qué plataformas estarán disponibles sus juegos?</summary>
+                <p>Lanzaremos primeramente en itch.io para PC y posteriormente en Google Play Store para móviles Android.</p>
+            </details>
+
+            <details>
+                <summary>¿Cómo puedo participar en las pruebas Beta?</summary>
+                <p>Anunciamos todas las convocatorias para betas privadas exclusivamente a través de nuestro servidor de Discord.</p>
+            </details>
+            -->
+
+            <details>
+                <summary>¿En qué plataformas estarán disponibles sus juegos?</summary>
+                <p>Nos enfocamos principalmente en PC (Windows y Linux) y dispositivos móviles (Android). Por el momento no
+                    tenemos planes de publicar en consolas, aunque las plataformas finales pueden variar según cada proyecto.</p>
+            </details>
+
+            <details>
+                <summary>¿Cómo puedo participar en las pruebas Beta?</summary>
+                <p>Anunciamos todas las convocatorias para betas privadas exclusivamente a través de nuestro servidor de Discord.</p>
+            </details>
+
+            <details>
+                <summary>¿Puedo crear contenido o hacer stream de sus juegos?</summary>
+                <p>¡Sí! Tienes total libertad para transmitir, grabar gameplays y monetizar tu contenido con nuestros títulos.</p>
+            </details>
+
+            <details>
+                <summary>¿Dónde puedo reportar un bug o dar sugerencias?</summary>
+                <p>Recibimos todo el feedback y reportes de errores directamente en los canales dedicados de nuestro Discord
+                    o mediante correo con la etiqueta [Bug] en el asunto del mismo.</p>
+            </details>
+
+            <details>
+                <summary>¿Cómo puedo contactar al estudio para prensa o negocios?</summary>
+                <p>Para propuestas comerciales, prensa o colaboraciones, puedes escribirnos a través de nuestro correo con la
+                    etiqueta [Business] en el asunto del correo.</p>
+            </details>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <div class="social-links-container">
+            <a href="https://www.youtube.com/@FlashYngStudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/youtube_icon.png" alt="YouTube" class="social-icon">
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://www.instagram.com/flashyngstudios" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/instagram_icon.png" alt="Instagram" class="social-icon">
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://discord.gg/7MVKK58HyQ" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/discord_icon.png" alt="Discord" class="social-icon">
+                <span>Discord</span>
+            </a>
+
+            <a href="https://flashyng.itch.io" target="_blank" rel="noopener" class="social-btn">
+                <img src="Assets/Images/Brand/itchio_icon.png" alt="itchio" class="social-icon">
+                <span>itch.io</span>
+            </a>
+        </div>
+
+        <p data-lang="footer-copyright">&copy; 2026 FlashYng Studios. Todos los derechos reservados.</p>
+        <a data-lang="footer-privacity" href="privacy-policy.html" class="privacy-link">Política de Privacidad</a>
+    </footer>
+
+    <script src="./JS/langSelector.js"></script>
+    <script src="./JS/hamburguerMenuToggle.js"></script>
+
+</body>
+</html>
